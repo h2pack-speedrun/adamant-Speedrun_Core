@@ -17,11 +17,12 @@ reload  = mods['SGG_Modding-ReLoad']
 
 config = chalk.auto('config.lua')
 public.config = config
+local Framework = mods['adamant-ModpackFramework']
 
 local def = {
     NUM_PROFILES    = #config.Profiles,
     defaultProfiles = {},
-
+    groupStyleDefault = Framework.GroupStyle.SEPARATOR,
     renderQuickSetup = function(ctx)
         local text, color, hasEntries = ctx.getCategoryStatus("Bug Fixes")
         if not hasEntries then
@@ -54,7 +55,6 @@ local def = {
 local PACK_ID = "speedrun"
 
 local function init()
-    local Framework = mods['adamant-ModpackFramework']
     Framework.init({
         packId      = PACK_ID,
         windowTitle = "Speedrun",
