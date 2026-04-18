@@ -22,16 +22,20 @@ local Framework = mods['adamant-ModpackFramework']
 local def = {
     NUM_PROFILES    = #config.Profiles,
     defaultProfiles = {},
-    groupStyleDefault = Framework.GroupStyle.SEPARATOR,
     renderQuickSetup = function(ctx)
-        local text, color, hasEntries = ctx.getCategoryStatus("Bug Fixes")
+        local bugFixIds = {
+            "BugFixesBoons",
+            "BugFixesEncounters",
+            "BugFixesWeapons",
+        }
+        local text, color, hasEntries = ctx.getModulesStatus(bugFixIds)
         if not hasEntries then
             return
         end
 
         ctx.drawColoredText(
             ctx.colors.info,
-            "Toggle all bug fixes at once. Go to the Bug Fixes tab for individual control."
+            "Toggle all bug-fix modules at once. Use each module tab for individual control."
         )
         ctx.drawColoredText(ctx.colors.text, "Current Status: ")
         ctx.ui.SameLine()
@@ -39,16 +43,27 @@ local def = {
         ctx.ui.Spacing()
 
         if ctx.ui.Button("Enable All") then
-            ctx.setCategoryEnabled("Bug Fixes", true)
+            ctx.setModulesEnabled(bugFixIds, true)
         end
         ctx.ui.SameLine()
         if ctx.ui.Button("Disable All") then
-            ctx.setCategoryEnabled("Bug Fixes", false)
+            ctx.setModulesEnabled(bugFixIds, false)
         end
 
         ctx.ui.Separator()
         ctx.ui.Spacing()
     end,
+    moduleOrder = {
+        "Hammer Selection",
+        "Quality of Life",
+        "Run Modifiers: NPCs & Routing",
+        "Run Modifiers: World & Combat Tweaks",
+        "Bug Fixes: Boons & Hammers",
+        "Bug Fixes: Encounters",
+        "Bug Fixes: Weapons",
+        "Speedrun Timer",
+    }
+
 
 }
 
