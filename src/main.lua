@@ -17,7 +17,6 @@ reload  = mods['SGG_Modding-ReLoad']
 
 config = chalk.auto('config.lua')
 public.config = config
-local Framework = mods['adamant-ModpackFramework']
 
 local def = {
     NUM_PROFILES    = #config.Profiles,
@@ -70,19 +69,26 @@ local def = {
 local PACK_ID = "speedrun"
 
 local function init()
+    local Framework = rom.mods["adamant-ModpackFramework"]
+    assert(Framework and type(Framework.init) == "function",
+        "adamant-Speedrun_Core: adamant-ModpackFramework is not loaded")
+
     Framework.init({
         packId      = PACK_ID,
         windowTitle = "Speedrun",
         config      = config,
         def         = def,
-        modutil     = modutil,
     })
 end
 
 local loader = reload.auto_single()
 modutil.once_loaded.game(function()
+    local Framework = rom.mods["adamant-ModpackFramework"]
+    assert(Framework and type(Framework.getRenderer) == "function",
+        "adamant-Speedrun_Core: adamant-ModpackFramework is not loaded")
+
     rom.gui.add_imgui(Framework.getRenderer(PACK_ID))
     rom.gui.add_always_draw_imgui(Framework.getAlwaysDrawRenderer(PACK_ID))
     rom.gui.add_to_menu_bar(Framework.getMenuBar(PACK_ID))
-    loader.load(init)
+    loader.load(nil, init)
 end)
