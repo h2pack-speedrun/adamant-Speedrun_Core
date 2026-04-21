@@ -21,13 +21,13 @@ adamant-ModpackFramework = "1.0.0"
 
 
 # -- submodules-start --
-adamant-Speedrun_BugFixesBoons = "0.0.1"
-adamant-Speedrun_BugFixesEncounters = "0.0.1"
-adamant-Speedrun_BugFixesWeapons = "0.0.1"
+adamant-Speedrun_BugFixesBoons = "1.0.0"
+adamant-Speedrun_BugFixesEncounters = "1.0.0"
+adamant-Speedrun_BugFixesWeapons = "1.0.01.0.0"
 adamant-Speedrun_FirstHammer = "1.0.0"
-adamant-Speedrun_QoL = "0.0.1"
-adamant-Speedrun_RunModsNPCs = "0.0.1"
-adamant-Speedrun_RunModsWorld = "0.0.1"
+adamant-Speedrun_QoL = "1.0.0"
+adamant-Speedrun_RunModsNPCs = "1.0.0"
+adamant-Speedrun_RunModsWorld = "1.0.0"
 adamant-Speedrun_Timer = "1.0.0"
 # -- submodules-end --
 
