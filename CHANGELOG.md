@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Changed
+
+- Hardened GitHub Actions so coordinator source validation runs on push, pull request, and release.
+
 ## [1.0.0] - 2026-04-21
 
 [unreleased]: https://github.com/h2pack-speedrun/adamant-Speedrun_Core/compare/1.0.0...HEAD
