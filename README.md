@@ -1,51 +1,44 @@
-# Speedrun Core
+# Speedrun Modpack
 
-Core coordinator for the [Speedrun modpack](https://github.com/h2pack-speedrun/speedrun-modpack).
+Speedrun is a modular Hades II speedrun pack that brings together targeted bug fixes, routing controls, quality-of-life options, and in-game timing support.
 
+## What Speedrun Provides
 
-## What The Speedrun Pack Does
+The current gameplay modules focus on four parts of a speedrun setup:
 
-The Speedrun modpack is a collection of speedrun-focused fixes, routing controls, and utility modules for Hades II.
+- Bug Fixes
+  Fixes boon, hammer, weapon, and encounter bugs that can affect consistency during attempts.
+- Routing Mods
+  Shapes first-hammer selection, NPC appearances, world structure, and surface route behavior.
+- Quality of Life
+  Smooths menu flow, reset speed, keyboard-and-mouse handling, dialogue skipping, location display, and post-run screens.
+- Timer
+  Adds in-game timing overlays for real-time, load-removed, and engine-backed run timing.
 
-The current modules cover four broad areas:
+Together, these modules let you tune:
 
-- `Bug Fixes`
-  Targeted fixes for boon, hammer, weapon, and encounter bugs that can affect run consistency.
-- `Routing Mods`
-  Modules that shape first-hammer selection, NPC spawns, world structure, and surface routing behavior.
-- `Utility`
-  Quality-of-life improvements for menu flow, reset speed, and keyboard-and-mouse play.
-- `Timing`
-  Built-in on-screen timer support for RTA and load-removed timing.
+- which known gameplay bugs are patched for speedrun attempts
+- how much routing variance is removed from hammer, NPC, and surface behavior
+- which attempt-flow conveniences are active
+- whether timing is handled in game through the shared Speedrun UI
 
 ## Included Modules
 
-- [BugFixesBoons](https://github.com/h2pack-speedrun/adamant-Speedrun_BugFixesBoons)
-- [BugFixesEncounters](https://github.com/h2pack-speedrun/adamant-Speedrun_BugFixesEncounters)
-- [BugFixesWeapons](https://github.com/h2pack-speedrun/adamant-Speedrun_BugFixesWeapons)
-- [FirstHammer](https://github.com/h2pack-speedrun/adamant-Speedrun_FirstHammer)
-- [QoL](https://github.com/h2pack-speedrun/adamant-Speedrun_QoL)
-- [RunModsNPCs](https://github.com/h2pack-speedrun/adamant-Speedrun_RunModsNPCs)
-- [RunModsWorld](https://github.com/h2pack-speedrun/adamant-Speedrun_RunModsWorld)
-- [Timer](https://github.com/h2pack-speedrun/adamant-Speedrun_Timer)
 
-This package provides the shared Speedrun window and the pack-level behavior that ties the Speedrun modules together.
+- [Bug Fixes: Boons](https://thunderstore.io/c/hades-ii/p/adamant/Speedrun_BugFixesBoons)
+- [Bug Fixes: Encounters](https://thunderstore.io/c/hades-ii/p/adamant/Speedrun_BugFixesEncounters)
+- [Bug Fixes: Weapons](https://thunderstore.io/c/hades-ii/p/adamant/Speedrun_BugFixesWeapons)
+- [First Hammer](https://thunderstore.io/c/hades-ii/p/adamant/Speedrun_FirstHammer)
+- [Quality of Life](https://thunderstore.io/c/hades-ii/p/adamant/Speedrun_QoL)
+- [Run Mods: NPCs](https://thunderstore.io/c/hades-ii/p/adamant/Speedrun_RunModsNPCs)
+- [Run Mods: World](https://thunderstore.io/c/hades-ii/p/adamant/Speedrun_RunModsWorld)
+- [Speedrun Timer](https://thunderstore.io/c/hades-ii/p/adamant/Speedrun_Timer)
 
-It owns:
+## How To Use
 
-- pack identity and coordinator bootstrap
-- shared profile slots and default profile data
-- module discovery and the combined Speedrun settings UI
-- the menu entry and main control surface for the full modpack
-
-Players normally install this as part of the full Speedrun pack, not as a standalone gameplay module.
-
-
-## Installation
-
-Install through the full [Speedrun modpack](https://github.com/h2pack-speedrun/speedrun-modpack) via r2modman or your preferred ReturnOfModding workflow.
+Install using r2modman. In game, open the Speedrun menu and configure the modules from the shared settings window.
 
 ## More Information
 
-- [Speedrun modpack shell repo](https://github.com/h2pack-speedrun/speedrun-modpack)
+- [Speedrun modpack shell repo](https://thunderstore.io/c/hades-ii/p/adamant/Speedrun_Core/)
 - [Changelog](CHANGELOG.md)
