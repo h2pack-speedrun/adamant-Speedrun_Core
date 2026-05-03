@@ -1,7 +1,8 @@
 -- =============================================================================
 -- adamant-ModpackSpeedrunCore: Modpack Coordinator
 -- =============================================================================
--- Thin coordinator: wires globals, owns config and def, delegates everything
+-- luacheck: globals Framework
+-- Thin coordinator: wires globals, owns config/setup, delegates everything
 -- else to adamant-ModpackFramework.
 
 local mods = rom.mods
@@ -12,15 +13,26 @@ rom = rom
 _PLUGIN = _PLUGIN
 game = rom.game
 modutil = mods['SGG_Modding-ModUtil']
-chalk   = mods['SGG_Modding-Chalk']
-reload  = mods['SGG_Modding-ReLoad']
+local chalk   = mods['SGG_Modding-Chalk']
+local reload  = mods['SGG_Modding-ReLoad']
+---@module "adamant-ModpackLib"
+---@type AdamantModpackLib
+lib = mods["adamant-ModpackLib"]
+---@module "adamant-ModpackFramework"
+---@type AdamantModpackFramework
+Framework = mods["adamant-ModpackFramework"]
 
-config = chalk.auto('config.lua')
-public.config = config
+local config = chalk.auto('config.lua')
+local PACK_ID = "speedrun"
+local WINDOW_TITLE = "Speedrun"
+local DEFAULT_PROFILES = {}
 
-local def = {
-    NUM_PROFILES    = #config.Profiles,
-    defaultProfiles = {},
+local function textColored(ctx, color, text)
+    lib.imguiHelpers.textColored(ctx.ui, color, text)
+end
+
+local FRAMEWORK_OPTS = {
+    ---@param ctx AdamantModpackFramework.QuickSetupContext
     renderQuickSetup = function(ctx)
         local bugFixIds = {
             "BugFixesBoons",
@@ -32,13 +44,13 @@ local def = {
             return
         end
 
-        ctx.drawColoredText(
+        textColored(ctx,
             ctx.colors.info,
             "Toggle all bug-fix modules at once. Use each module tab for individual control."
         )
-        ctx.drawColoredText(ctx.colors.text, "Current Status: ")
+        textColored(ctx, ctx.colors.text, "Current Status: ")
         ctx.ui.SameLine()
-        ctx.drawColoredText(color, text)
+        textColored(ctx, color, text)
         ctx.ui.Spacing()
 
         if ctx.ui.Button("Enable All") then
@@ -53,42 +65,62 @@ local def = {
         ctx.ui.Spacing()
     end,
     moduleOrder = {
-        "Hammer Selection",
-        "Quality of Life",
-        "Run Modifiers: NPCs & Routing",
-        "Run Modifiers: World & Combat Tweaks",
-        "Bug Fixes: Boons & Hammers",
-        "Bug Fixes: Encounters",
-        "Bug Fixes: Weapons",
-        "Speedrun Timer",
-    }
-
-
+        "FirstHammer",
+        "QoL",
+        "RunModsNPCs",
+        "RunModsWorld",
+        "BugFixesBoons",
+        "BugFixesEncounters",
+        "BugFixesWeapons",
+        "SpeedrunTimer",
+    },
 }
+local frameworkInitialized = false
+local rebuildInProgress = false
 
-local PACK_ID = "speedrun"
+local function rebuildFramework()
+    if rebuildInProgress or not frameworkInitialized then
+        return false
+    end
 
-local function init()
-    local Framework = rom.mods["adamant-ModpackFramework"]
     assert(Framework and type(Framework.init) == "function",
         "adamant-Speedrun_Core: adamant-ModpackFramework is not loaded")
 
-    Framework.init({
-        packId      = PACK_ID,
-        windowTitle = "Speedrun",
-        config      = config,
-        def         = def,
-    })
+    rebuildInProgress = true
+    local ok, err = xpcall(function()
+        Framework.init(PACK_ID, WINDOW_TITLE, config, #config.Profiles, DEFAULT_PROFILES, FRAMEWORK_OPTS)
+    end, debug.traceback)
+    rebuildInProgress = false
+
+    if not ok then
+        error(string.format("Framework rebuild failed for pack '%s': %s", PACK_ID, tostring(err)))
+    end
+
+    return true
+end
+
+mods.on_all_mods_loaded(function()
+    assert(lib and lib.lifecycle and type(lib.lifecycle.registerCoordinator) == "function",
+        "adamant-Speedrun_Core: adamant-ModpackLib is not loaded")
+    lib.lifecycle.registerCoordinator(PACK_ID, config)
+    lib.lifecycle.registerCoordinatorRebuild(PACK_ID, rebuildFramework)
+end)
+
+local function init()
+    assert(Framework and type(Framework.init) == "function",
+        "adamant-Speedrun_Core: adamant-ModpackFramework is not loaded")
+    Framework.init(PACK_ID, WINDOW_TITLE, config, #config.Profiles, DEFAULT_PROFILES, FRAMEWORK_OPTS)
+    frameworkInitialized = true
 end
 
 local loader = reload.auto_single()
-modutil.once_loaded.game(function()
-    local Framework = rom.mods["adamant-ModpackFramework"]
-    assert(Framework and type(Framework.getRenderer) == "function",
-        "adamant-Speedrun_Core: adamant-ModpackFramework is not loaded")
 
-    rom.gui.add_imgui(Framework.getRenderer(PACK_ID))
-    rom.gui.add_always_draw_imgui(Framework.getAlwaysDrawRenderer(PACK_ID))
-    rom.gui.add_to_menu_bar(Framework.getMenuBar(PACK_ID))
-    loader.load(nil, init)
+local function registerGui()
+    assert(Framework and type(Framework.registerGui) == "function",
+        "adamant-Speedrun_Core: adamant-ModpackFramework is not loaded")
+    Framework.registerGui(PACK_ID)
+end
+
+modutil.once_loaded.game(function()
+    loader.load(registerGui, init)
 end)
