@@ -116,9 +116,12 @@ end
 local loader = reload.auto_single()
 
 local function registerGui()
-    assert(Framework and type(Framework.registerGui) == "function",
+    assert(Framework and type(Framework.createGuiCallbacks) == "function",
         "adamant-Speedrun_Core: adamant-ModpackFramework is not loaded")
-    Framework.registerGui(PACK_ID)
+    local callbacks = Framework.createGuiCallbacks(PACK_ID)
+    rom.gui.add_imgui(callbacks.render)
+    rom.gui.add_always_draw_imgui(callbacks.alwaysDraw)
+    rom.gui.add_to_menu_bar(callbacks.menuBar)
 end
 
 modutil.once_loaded.game(function()
