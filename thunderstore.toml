@@ -5,7 +5,7 @@ schemaVersion = "0.0.1"
 [package]
 namespace = "adamant"
 name = "Speedrun_Core"
-versionNumber = "1.0.0"
+versionNumber = "1.1.0"
 description = "Speedrun modpack coordinator."
 websiteUrl = "https://github.com/h2pack-speedrun/adamant-Speedrun_Core"
 containsNsfwContent = false
@@ -21,14 +21,14 @@ adamant-ModpackFramework = "1.0.0"
 
 
 # -- submodules-start --
-adamant-Speedrun_BugFixesBoons = "1.0.0"
-adamant-Speedrun_BugFixesEncounters = "1.0.0"
-adamant-Speedrun_BugFixesWeapons = "1.0.0"
-adamant-Speedrun_FirstHammer = "1.0.0"
-adamant-Speedrun_QoL = "1.0.0"
-adamant-Speedrun_RunModsNPCs = "1.0.0"
-adamant-Speedrun_RunModsWorld = "1.0.0"
-adamant-Speedrun_Timer = "1.0.0"
+adamant-Speedrun_BugFixesBoons = "1.1.0"
+adamant-Speedrun_BugFixesEncounters = "1.1.0"
+adamant-Speedrun_BugFixesWeapons = "1.1.0"
+adamant-Speedrun_FirstHammer = "1.1.0"
+adamant-Speedrun_QoL = "1.1.0"
+adamant-Speedrun_RunModsNPCs = "1.1.0"
+adamant-Speedrun_RunModsWorld = "1.1.0"
+adamant-Speedrun_Timer = "1.1.0"
 # -- submodules-end --
 
 [build]
