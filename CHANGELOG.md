@@ -1,8 +1,12 @@
 # Changelog
 
-\-Coordinator for the Speedrun modpack. It owns pack identity, config, default profiles, and GUI registration. Discovery, hashing, HUD, and the main window are provided by `adamant-ModpackFramework`.
+Coordinator for the Speedrun modpack. It owns pack identity, config, default profiles, and GUI registration. Discovery, hashing, HUD, and the main window are provided by `adamant-ModpackFramework`.
 
 ## [Unreleased]
+
+### Changed
+
+- Ported coordinator boot to `Framework.registerCoordinator(...)` and `Framework.createPack(...)`.
 
 ## [1.1.0] - 2026-05-05
 

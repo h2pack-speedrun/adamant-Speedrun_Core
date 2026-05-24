@@ -5,7 +5,6 @@ globals = {
     "rom",
     "public",
     "config",
-    "lib",
     "modutil",
     "game",
     "chalk",

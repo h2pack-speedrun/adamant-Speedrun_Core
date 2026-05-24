@@ -15,9 +15,6 @@ game = rom.game
 modutil = mods['SGG_Modding-ModUtil']
 local chalk   = mods['SGG_Modding-Chalk']
 local reload  = mods['SGG_Modding-ReLoad']
----@module "adamant-ModpackLib"
----@type AdamantModpackLib
-lib = mods["adamant-ModpackLib"]
 ---@module "adamant-ModpackFramework"
 ---@type AdamantModpackFramework
 Framework = mods["adamant-ModpackFramework"]
@@ -28,12 +25,12 @@ local WINDOW_TITLE = "Speedrun"
 local DEFAULT_PROFILES = {}
 
 local function textColored(ctx, color, text)
-    lib.imguiHelpers.textColored(ctx.ui, color, text)
+    ctx.ui.TextColored(color[1], color[2], color[3], color[4], text)
 end
 
 local FRAMEWORK_OPTS = {
-    ---@param ctx AdamantModpackFramework.QuickSetupContext
-    renderQuickSetup = function(ctx)
+    ---@param ctx AdamantModpackFramework.PackQuickContentContext
+    drawPackQuickContent = function(ctx)
         local bugFixIds = {
             "BugFixesBoons",
             "BugFixesEncounters",
@@ -83,11 +80,11 @@ local function rebuildFramework()
         return false
     end
 
-    assert(Framework and type(Framework.tryInit) == "function",
+    assert(Framework and type(Framework.createPack) == "function",
         "adamant-Speedrun_Core: adamant-ModpackFramework is not loaded")
 
     rebuildInProgress = true
-    local ok = Framework.tryInit(PACK_ID, WINDOW_TITLE, config, #config.Profiles, DEFAULT_PROFILES, FRAMEWORK_OPTS)
+    local ok = Framework.createPack(PACK_ID, WINDOW_TITLE, config, #config.Profiles, DEFAULT_PROFILES, FRAMEWORK_OPTS)
     rebuildInProgress = false
 
     if not ok then
@@ -98,16 +95,15 @@ local function rebuildFramework()
 end
 
 mods.on_all_mods_loaded(function()
-    assert(lib and lib.coordinator and type(lib.coordinator.register) == "function",
-        "adamant-Speedrun_Core: adamant-ModpackLib is not loaded")
-    lib.coordinator.register(PACK_ID, config)
-    lib.coordinator.registerRebuild(PACK_ID, rebuildFramework)
+    assert(Framework and type(Framework.registerCoordinator) == "function",
+        "adamant-Speedrun_Core: adamant-ModpackFramework is not loaded")
+    Framework.registerCoordinator(PACK_ID, config, rebuildFramework)
 end)
 
 local function init()
-    assert(Framework and type(Framework.tryInit) == "function",
+    assert(Framework and type(Framework.createPack) == "function",
         "adamant-Speedrun_Core: adamant-ModpackFramework is not loaded")
-    local ok = Framework.tryInit(PACK_ID, WINDOW_TITLE, config, #config.Profiles, DEFAULT_PROFILES, FRAMEWORK_OPTS)
+    local ok = Framework.createPack(PACK_ID, WINDOW_TITLE, config, #config.Profiles, DEFAULT_PROFILES, FRAMEWORK_OPTS)
     frameworkInitialized = ok == true
 end
 
