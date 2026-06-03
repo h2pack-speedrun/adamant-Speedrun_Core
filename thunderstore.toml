@@ -27,11 +27,11 @@ adamant-Speedrun_BugFixesEncounters = "1.1.0"
 adamant-Speedrun_BugFixesWeapons = "1.1.0"
 adamant-Speedrun_FirstHammer = "1.1.0"
 adamant-Speedrun_Gameplay_QoL = "0.0.1"
-adamant-Speedrun_Live_Split = "0.0.1"
+adamant-Speedrun_Live_Split = "1.1.2"
 adamant-Speedrun_QoL = "1.1.0"
 adamant-Speedrun_RunModsNPCs = "1.1.0"
 adamant-Speedrun_RunModsWorld = "1.1.0"
-adamant-Speedrun_Select_First_Hammer = "0.0.1"
+adamant-Speedrun_Select_First_Hammer = "1.1.0"
 adamant-Speedrun_Timer = "1.1.2"
 # -- submodules-end --
 
