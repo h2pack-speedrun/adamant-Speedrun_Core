@@ -1,8 +1,9 @@
 # Speedrun Modpack
 
-Speedrun is a modular Hades II speedrun pack. It brings together first-hammer routing, in-game LiveSplit-style timing, quality-of-life options, gameplay-flow helpers, balance-affecting fixes, and Surface route adjustments under one shared Speedrun settings window.
+Unrelated Mod to the Hades 1 modpack. Just slightly inspired by it is all.
 
-Install this package when you want the full Speedrun setup. Each module can be enabled or disabled independently in game.
+This is a modular Hades II modpack. It brings together first-hammer routing, in-game LiveSplit-style timing, quality-of-life options, gameplay-flow helpers, balance-affecting fixes, and Surface route adjustments under one shared Speedrun settings window.
+
 
 ## Included Modules
 
