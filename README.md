@@ -44,5 +44,5 @@ Install using r2modman. In game, open the Speedrun menu and configure the module
 
 ## More Information
 
-- [Speedrun modpack shell repo](https://thunderstore.io/c/hades-ii/p/adamant/Speedrun_Core/)
+- [Speedrun modpack shell repo](https://thunderstore.io/c/hades-ii/p/adamant/Speedrun_Modpack/)
 - [Changelog](CHANGELOG.md)

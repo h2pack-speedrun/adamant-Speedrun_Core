@@ -4,10 +4,10 @@ schemaVersion = "0.0.1"
 
 [package]
 namespace = "adamant"
-name = "Speedrun_Core"
+name = "Speedrun_Modpack"
 versionNumber = "1.1.0"
-description = "Speedrun modpack coordinator."
-websiteUrl = "https://github.com/h2pack-speedrun/adamant-Speedrun_Core"
+description = "Speedrun modpack package."
+websiteUrl = "https://github.com/h2pack-speedrun/adamant-Speedrun_Modpack"
 containsNsfwContent = false
 
 [package.dependencies]

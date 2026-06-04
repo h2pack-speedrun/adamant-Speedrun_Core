@@ -33,6 +33,7 @@ local FRAMEWORK_OPTS = {
     drawPackQuickContent = function(ctx)
         local balanceIds = {
             "BalanceChanges",
+            "SurfaceRebalance"
         }
         local text, color, hasEntries = ctx.getModulesStatus(balanceIds)
         if not hasEntries then
@@ -41,7 +42,7 @@ local FRAMEWORK_OPTS = {
 
         textColored(ctx,
             ctx.colors.info,
-            "Toggle the balance package at once. Use the module tab for individual control."
+            "Enable or Disable Balance Changes."
         )
         textColored(ctx, ctx.colors.text, "Current Status: ")
         ctx.ui.SameLine()
@@ -77,7 +78,7 @@ local function rebuildFramework()
     end
 
     assert(Framework and type(Framework.createPack) == "function",
-        "adamant-Speedrun_Core: adamant-ModpackFramework is not loaded")
+        "adamant-Speedrun_Modpack: adamant-ModpackFramework is not loaded")
 
     rebuildInProgress = true
     local ok = Framework.createPack(PACK_ID, WINDOW_TITLE, config, #config.Profiles, DEFAULT_PROFILES, FRAMEWORK_OPTS)
@@ -92,13 +93,13 @@ end
 
 mods.on_all_mods_loaded(function()
     assert(Framework and type(Framework.registerCoordinator) == "function",
-        "adamant-Speedrun_Core: adamant-ModpackFramework is not loaded")
+        "adamant-Speedrun_Modpack: adamant-ModpackFramework is not loaded")
     Framework.registerCoordinator(PACK_ID, config, rebuildFramework)
 end)
 
 local function init()
     assert(Framework and type(Framework.createPack) == "function",
-        "adamant-Speedrun_Core: adamant-ModpackFramework is not loaded")
+        "adamant-Speedrun_Modpack: adamant-ModpackFramework is not loaded")
     local ok = Framework.createPack(PACK_ID, WINDOW_TITLE, config, #config.Profiles, DEFAULT_PROFILES, FRAMEWORK_OPTS)
     frameworkInitialized = ok == true
 end
@@ -107,7 +108,7 @@ local loader = reload.auto_single()
 
 local function registerGui()
     assert(Framework and type(Framework.createGuiCallbacks) == "function",
-        "adamant-Speedrun_Core: adamant-ModpackFramework is not loaded")
+        "adamant-Speedrun_Modpack: adamant-ModpackFramework is not loaded")
     local callbacks = Framework.createGuiCallbacks(PACK_ID)
     rom.gui.add_imgui(callbacks.render)
     rom.gui.add_always_draw_imgui(callbacks.alwaysDraw)
