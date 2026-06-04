@@ -26,12 +26,12 @@ local DEFAULT_PROFILES = {}
 
 local FRAMEWORK_OPTS = {
     moduleOrder = {
-        "SelectFirstHammer",
+        "Select_First_Hammer",
         "LiveSplit",
-        "GameplayQoL",
+        "Gameplay_QoL",
         "QoL",
-        "BalanceChanges",
-        "SurfaceRebalance",
+        "Balance_Changes",
+        "Surface_Rebalance",
     },
 }
 local frameworkInitialized = false
