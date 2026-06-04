@@ -4,35 +4,39 @@ Speedrun is a modular Hades II speedrun pack that brings together targeted bug f
 
 ## What Speedrun Provides
 
-The current gameplay modules focus on four parts of a speedrun setup:
+The current gameplay modules focus on six parts of a speedrun setup:
 
-- Bug Fixes
-  Fixes boon, hammer, weapon, and encounter bugs that can affect consistency during attempts.
-- Routing Mods
-  Shapes first-hammer selection, NPC appearances, world structure, and surface route behavior.
+- Select First Hammer
+  Controls first-hammer selection.
+- Balance Changes
+  Collects optional weapon, boon, encounter, and damage-rule changes that affect run balance.
+- Gameplay QoL
+  Shapes run-flow helpers such as NPC routing, reward timing, and keepsake behavior.
+- Surface Rebalance
+  Controls Surface-specific route structure and encounter pacing.
 - Quality of Life
   Smooths menu flow, reset speed, keyboard-and-mouse handling, dialogue skipping, location display, and post-run screens.
-- Timer
+- LiveSplit
   Adds in-game timing overlays for real-time, load-removed, and engine-backed run timing.
 
 Together, these modules let you tune:
 
-- which known gameplay bugs are patched for speedrun attempts
-- how much routing variance is removed from hammer, NPC, and surface behavior
+- which first hammer behavior is active
+- which balance-affecting fixes and rule changes are enabled
+- how much routing variance is removed from NPC and gameplay-flow behavior
+- how much Surface route structure and encounter pacing are adjusted
 - which attempt-flow conveniences are active
 - whether timing is handled in game through the shared Speedrun UI
 
 ## Included Modules
 
 
-- [Bug Fixes: Boons](https://thunderstore.io/c/hades-ii/p/adamant/Speedrun_BugFixesBoons)
-- [Bug Fixes: Encounters](https://thunderstore.io/c/hades-ii/p/adamant/Speedrun_BugFixesEncounters)
-- [Bug Fixes: Weapons](https://thunderstore.io/c/hades-ii/p/adamant/Speedrun_BugFixesWeapons)
-- [First Hammer](https://thunderstore.io/c/hades-ii/p/adamant/Speedrun_FirstHammer)
+- [Balance Changes](https://thunderstore.io/c/hades-ii/p/adamant/Speedrun_Balance_Changes)
+- [Gameplay QoL](https://thunderstore.io/c/hades-ii/p/adamant/Speedrun_Gameplay_QoL)
+- [LiveSplit](https://thunderstore.io/c/hades-ii/p/adamant/Speedrun_LiveSplit)
 - [Quality of Life](https://thunderstore.io/c/hades-ii/p/adamant/Speedrun_QoL)
-- [Run Mods: NPCs](https://thunderstore.io/c/hades-ii/p/adamant/Speedrun_RunModsNPCs)
-- [Run Mods: World](https://thunderstore.io/c/hades-ii/p/adamant/Speedrun_RunModsWorld)
-- [Speedrun Timer](https://thunderstore.io/c/hades-ii/p/adamant/Speedrun_Timer)
+- [Select First Hammer](https://thunderstore.io/c/hades-ii/p/adamant/Speedrun_Select_First_Hammer)
+- [Surface Rebalance](https://thunderstore.io/c/hades-ii/p/adamant/Speedrun_Surface_Rebalance)
 
 ## How To Use
 

@@ -22,17 +22,11 @@ adamant-ModpackFramework = "1.0.0"
 
 # -- submodules-start --
 adamant-Speedrun_Balance_Changes = "0.0.1"
-adamant-Speedrun_BugFixesBoons = "1.1.0"
-adamant-Speedrun_BugFixesEncounters = "1.1.0"
-adamant-Speedrun_BugFixesWeapons = "1.1.0"
-adamant-Speedrun_FirstHammer = "1.1.0"
 adamant-Speedrun_Gameplay_QoL = "0.0.1"
 adamant-Speedrun_LiveSplit = "1.1.2"
 adamant-Speedrun_QoL = "1.1.0"
-adamant-Speedrun_RunModsNPCs = "1.1.0"
-adamant-Speedrun_RunModsWorld = "1.1.0"
 adamant-Speedrun_Select_First_Hammer = "1.1.0"
-adamant-Speedrun_Timer = "1.1.2"
+adamant-Speedrun_Surface_Rebalance = "0.0.1"
 # -- submodules-end --
 
 [build]

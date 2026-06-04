@@ -31,45 +31,41 @@ end
 local FRAMEWORK_OPTS = {
     ---@param ctx AdamantModpackFramework.PackQuickContentContext
     drawPackQuickContent = function(ctx)
-        local bugFixIds = {
-            "BugFixesBoons",
-            "BugFixesEncounters",
-            "BugFixesWeapons",
+        local balanceIds = {
+            "BalanceChanges",
         }
-        local text, color, hasEntries = ctx.getModulesStatus(bugFixIds)
+        local text, color, hasEntries = ctx.getModulesStatus(balanceIds)
         if not hasEntries then
             return
         end
 
         textColored(ctx,
             ctx.colors.info,
-            "Toggle all bug-fix modules at once. Use each module tab for individual control."
+            "Toggle the balance package at once. Use the module tab for individual control."
         )
         textColored(ctx, ctx.colors.text, "Current Status: ")
         ctx.ui.SameLine()
         textColored(ctx, color, text)
         ctx.ui.Spacing()
 
-        if ctx.ui.Button("Enable All") then
-            ctx.setModulesEnabled(bugFixIds, true)
+        if ctx.ui.Button("Enable") then
+            ctx.setModulesEnabled(balanceIds, true)
         end
         ctx.ui.SameLine()
-        if ctx.ui.Button("Disable All") then
-            ctx.setModulesEnabled(bugFixIds, false)
+        if ctx.ui.Button("Disable") then
+            ctx.setModulesEnabled(balanceIds, false)
         end
 
         ctx.ui.Separator()
         ctx.ui.Spacing()
     end,
     moduleOrder = {
-        "FirstHammer",
+        "SelectFirstHammer",
+        "LiveSplit",
         "QoL",
-        "RunModsNPCs",
-        "RunModsWorld",
-        "BugFixesBoons",
-        "BugFixesEncounters",
-        "BugFixesWeapons",
-        "SpeedrunTimer",
+        "GameplayQoL",
+        "BalanceChanges",
+        "SurfaceRebalance",
     },
 }
 local frameworkInitialized = false
