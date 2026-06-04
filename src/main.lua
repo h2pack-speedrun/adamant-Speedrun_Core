@@ -43,7 +43,7 @@ local function rebuildFramework()
     end
 
     assert(Framework and type(Framework.createPack) == "function",
-        "adamant-Speedrun_Modpack: adamant-ModpackFramework is not loaded")
+        "adamantSpeedrun-Speedrun_Modpack: adamant-ModpackFramework is not loaded")
 
     rebuildInProgress = true
     local ok = Framework.createPack(PACK_ID, WINDOW_TITLE, config, #config.Profiles, DEFAULT_PROFILES, FRAMEWORK_OPTS)
@@ -58,13 +58,13 @@ end
 
 mods.on_all_mods_loaded(function()
     assert(Framework and type(Framework.registerCoordinator) == "function",
-        "adamant-Speedrun_Modpack: adamant-ModpackFramework is not loaded")
+        "adamantSpeedrun-Speedrun_Modpack: adamant-ModpackFramework is not loaded")
     Framework.registerCoordinator(PACK_ID, config, rebuildFramework)
 end)
 
 local function init()
     assert(Framework and type(Framework.createPack) == "function",
-        "adamant-Speedrun_Modpack: adamant-ModpackFramework is not loaded")
+        "adamantSpeedrun-Speedrun_Modpack: adamant-ModpackFramework is not loaded")
     local ok = Framework.createPack(PACK_ID, WINDOW_TITLE, config, #config.Profiles, DEFAULT_PROFILES, FRAMEWORK_OPTS)
     frameworkInitialized = ok == true
 end
@@ -73,7 +73,7 @@ local loader = reload.auto_single()
 
 local function registerGui()
     assert(Framework and type(Framework.createGuiCallbacks) == "function",
-        "adamant-Speedrun_Modpack: adamant-ModpackFramework is not loaded")
+        "adamantSpeedrun-Speedrun_Modpack: adamant-ModpackFramework is not loaded")
     local callbacks = Framework.createGuiCallbacks(PACK_ID)
     rom.gui.add_imgui(callbacks.render)
     rom.gui.add_always_draw_imgui(callbacks.alwaysDraw)
