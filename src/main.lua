@@ -63,8 +63,8 @@ local FRAMEWORK_OPTS = {
     moduleOrder = {
         "SelectFirstHammer",
         "LiveSplit",
-        "QoL",
         "GameplayQoL",
+        "QoL",
         "BalanceChanges",
         "SurfaceRebalance",
     },
