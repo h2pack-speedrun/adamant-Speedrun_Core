@@ -24,42 +24,7 @@ local PACK_ID = "speedrun"
 local WINDOW_TITLE = "Speedrun"
 local DEFAULT_PROFILES = {}
 
-local function textColored(ctx, color, text)
-    ctx.ui.TextColored(color[1], color[2], color[3], color[4], text)
-end
-
 local FRAMEWORK_OPTS = {
-    ---@param ctx AdamantModpackFramework.PackQuickContentContext
-    drawPackQuickContent = function(ctx)
-        local balanceIds = {
-            "BalanceChanges",
-            "SurfaceRebalance"
-        }
-        local text, color, hasEntries = ctx.getModulesStatus(balanceIds)
-        if not hasEntries then
-            return
-        end
-
-        textColored(ctx,
-            ctx.colors.info,
-            "Enable or Disable Balance Changes."
-        )
-        textColored(ctx, ctx.colors.text, "Current Status: ")
-        ctx.ui.SameLine()
-        textColored(ctx, color, text)
-        ctx.ui.Spacing()
-
-        if ctx.ui.Button("Enable") then
-            ctx.setModulesEnabled(balanceIds, true)
-        end
-        ctx.ui.SameLine()
-        if ctx.ui.Button("Disable") then
-            ctx.setModulesEnabled(balanceIds, false)
-        end
-
-        ctx.ui.Separator()
-        ctx.ui.Spacing()
-    end,
     moduleOrder = {
         "SelectFirstHammer",
         "LiveSplit",
