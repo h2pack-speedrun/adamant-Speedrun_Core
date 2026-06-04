@@ -2,8 +2,16 @@
 
 Unrelated Mod to the Hades 1 modpack. Just slightly inspired by it is all.
 
-This is a modular Hades II modpack. Every module here can either be installed individually or part of the pack. It brings together first-hammer routing, in-game LiveSplit-style timing, quality-of-life options, gameplay-flow helpers, balance-affecting fixes, and Surface route adjustments under one shared Speedrun settings window.
+This is a modular Hades II modpack. Every module here can either be installed individually or part of the pack. It brings together first-hammer selection, in-game LiveSplit-style timing, quality-of-life options, gameplay-flow quality-of-life adjustments, minor balance/description fixes, and Surface route adjustments under one shared Speedrun settings window.
 
+## What the pack brings instead of individual installs
+
+### Unified UI
+Have a single unified ui panel to manage all modules toggles, settings and shared options.
+### Profiles
+Save your different configurations (Anyfear/Highfear/RTA/Multiruns) into different profiels and load them by a click while ingame.
+### Hashing
+While the pack is installed, a unique fingerprint will be shown on the side to identify the settings that pack has been configured with.
 
 ## Included Modules
 
