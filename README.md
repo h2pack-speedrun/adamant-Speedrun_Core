@@ -8,8 +8,10 @@ This is a modular Hades II modpack. Every module here can either be installed in
 
 ### Unified UI
 Have a single unified ui panel to manage all modules toggles, settings and shared options.
+![](assets/QuickSetup.png)
 ### Profiles
 Save your different configurations (Anyfear/Highfear/RTA/Multiruns) into different profiels and load them by a click while ingame.
+![](assets/Profile.png)
 ### Hashing
 While the pack is installed, a unique fingerprint will be shown on the side to identify the settings that pack has been configured with.
 
@@ -30,6 +32,9 @@ Coverage is grouped by weapon and aspect:
 - Skull
 - Coat
 
+#### Hammer Panel Options
+![](assets/Hammer.png)
+
 ### LiveSplit
 
 Adds native LiveSplit-like timing support to the game.
@@ -44,6 +49,12 @@ Supported timing views include:
 - Single-run split recording
 - Multi-run batch recording for routing or practice sessions
 - IGT, RTA, and LrT timing columns
+
+#### Options while doing single run repeated recording
+![](assets/SingleRun.png)
+
+#### Options while doing multio  repeated recording
+![](assets/MultiRun.png)
 
 ### Quality of Life
 
