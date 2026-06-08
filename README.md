@@ -89,8 +89,6 @@ Current options:
   Fixes Familiars being summoned after a delay upon entering a room.
 - Miniboss Encounter Fix
   Fixes minibosses with top-screen health bars not properly progressing biome depth.
-- Corrosion Fix
-  Fixes Corrosion aggroing enemies on Thessaly boats.
 - Skip Gem Boss Reward
   Stops bosses from dropping gem rewards when using Grave Thirst.
 - Prevent Echo Scam
@@ -112,12 +110,8 @@ Adds optional fixes and rule changes that alter weapon, boon, encounter, or dama
 
 Current options:
 
-- Braid Fix
-  Fixes Braid of Atlas to properly buff casts.
-- Cardio Torch Fix
-  Fixes Cardio Gain interactions with Torch specials.
-- ET Fix
-  Fixes ET working with Anubis by creating a third omega attack field. Also fixes Anubis omega attack distance based on casting angle.
+- Anubis Wall Placement Fix
+  Fixes Mirrored Ankh omega attack wall placement based on casting angle.
 - Omega Cast Fix
   Fixes omega-cast moves not counting as cast damage.
 - Poseidon Waves Fix
@@ -126,16 +120,12 @@ Current options:
   Removes the second charge stage of Glorious Disaster and Giga Moonburst, baking the bonus into stage 1.
 - Shimmering Moonshot Fix
   Fixes Shimmering Moonshot not applying its damage bonus to omega special.
-- Extra Dose Fix
-  Fixes Extra Dose interactions with Coat second punch and dash strike.
 - Aspect of Selene Fix
-  Makes Aspect of Selene properly register its Hex so Path of Stars can be offered directly. Skyfall starts at full Moonglow.
-- Axe and Blade Omega Channel Fix
-  Fixes Axe omega attack and Blade omega special not benefiting correctly from channeling bonuses.
+  Treats Aspect of Selene's built-in Hex as the run's Selene pickup so Path of Stars replaces normal Selene drops. Skyfall starts at full Moonglow.
+- Axe Omega Channel Fix
+  Fixes Axe omega attack not benefiting correctly from channeling bonuses.
 - Tidal Ring Fix
   Fixes Tidal Ring not hitting the same mob twice with Circe.
-- GGG Echo Fix
-  Allows GGG to be offered in Jeweled Pom runs.
 - Suffering Fix
   Fixes Suffering on Sight not bypassing the Wards vow when dealing damage.
 
