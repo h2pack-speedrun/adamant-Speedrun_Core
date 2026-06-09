@@ -21,7 +21,7 @@ Framework = mods["adamant-ModpackFramework"]
 
 local config = chalk.auto('config.lua')
 local PACK_ID = "speedrun"
-local WINDOW_TITLE = "Speedrun"
+local PACK_DISPLAY_NAME = "Speedrun"
 local DEFAULT_PROFILES = {}
 
 local FRAMEWORK_OPTS = {
@@ -46,7 +46,7 @@ local function rebuildFramework()
         "adamantSpeedrun-Speedrun_Modpack: adamant-ModpackFramework is not loaded")
 
     rebuildInProgress = true
-    local ok = Framework.createPack(PACK_ID, WINDOW_TITLE, config, #config.Profiles, DEFAULT_PROFILES, FRAMEWORK_OPTS)
+    local ok = Framework.createPack(PACK_ID, config, #config.Profiles, DEFAULT_PROFILES, FRAMEWORK_OPTS)
     rebuildInProgress = false
 
     if not ok then
@@ -59,13 +59,13 @@ end
 mods.on_all_mods_loaded(function()
     assert(Framework and type(Framework.registerCoordinator) == "function",
         "adamantSpeedrun-Speedrun_Modpack: adamant-ModpackFramework is not loaded")
-    Framework.registerCoordinator(PACK_ID, config, rebuildFramework)
+    Framework.registerCoordinator(PACK_ID, PACK_DISPLAY_NAME, config, rebuildFramework)
 end)
 
 local function init()
     assert(Framework and type(Framework.createPack) == "function",
         "adamantSpeedrun-Speedrun_Modpack: adamant-ModpackFramework is not loaded")
-    local ok = Framework.createPack(PACK_ID, WINDOW_TITLE, config, #config.Profiles, DEFAULT_PROFILES, FRAMEWORK_OPTS)
+    local ok = Framework.createPack(PACK_ID, config, #config.Profiles, DEFAULT_PROFILES, FRAMEWORK_OPTS)
     frameworkInitialized = ok == true
 end
 
