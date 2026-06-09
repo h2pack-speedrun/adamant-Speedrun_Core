@@ -7,11 +7,19 @@ This is a modular Hades II modpack. Every module here can either be installed in
 ## What the pack brings instead of individual installs
 
 ### Unified UI
-Have a single unified ui panel to manage all modules toggles, settings and shared options.
-![](assets/QuickSetup.png)
+Have a single unified UI panel to manage all module toggles, settings, and shared options.
+
+The Quick Setup tab gives each included module a compact enable toggle so a profile can be configured without jumping between separate mod menus.
+
+![Speedrun modpack Quick Setup tab with module enable toggles](assets/QuickSetup.png)
+
 ### Profiles
-Save your different configurations (Anyfear/Highfear/RTA/Multiruns) into different profiels and load them by a click while ingame.
-![](assets/Profile.png)
+Save different configurations, such as Any Fear, High Fear, RTA, or multi-run practice, into profiles and load them with one click in game.
+
+Profiles store the shared Speedrun settings state, making it easier to swap between routing, practice, and submission setups.
+
+![Speedrun modpack profile management tab](assets/Profile.png)
+
 ### Hashing
 While the pack is installed, a unique fingerprint will be shown on the side to identify the settings that pack has been configured with.
 
@@ -33,11 +41,20 @@ Coverage is grouped by weapon and aspect:
 - Coat
 
 #### Hammer Panel Options
-![](assets/Hammer.png)
+
+![Select First Hammer panel with weapon-aspect hammer choices](assets/Hammer.png)
 
 ### LiveSplit
 
 Adds native LiveSplit-like timing support to the game.
+
+#### Examples
+The recording table can show biome splits with selected timing columns while a run is active.
+
+![LiveSplit timer table with biome splits](assets/Timer1.png)
+
+
+![Another LiveSplit timer table](assets/Timer2.png)
 
 LiveSplit records runs and shows selected timing information while you play. Its main feature is a compact recording table that tracks your route through a run.
 
@@ -51,10 +68,14 @@ Supported timing views include:
 - IGT, RTA, and LrT timing columns
 
 #### Options while doing single run repeated recording
-![](assets/SingleRun.png)
+Single-run mode keeps the next run ready for split recording and is aimed at repeated normal attempts.
 
-#### Options while doing multio  repeated recording
-![](assets/MultiRun.png)
+![LiveSplit single-run recording controls](assets/SingleRun.png)
+
+#### Options while doing multi run repeated recording
+Multi-run mode records a batch of consecutive runs and keeps cumulative batch totals.
+
+![LiveSplit multi-run batch recording controls](assets/MultiRun.png)
 
 ### Quality of Life
 
