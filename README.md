@@ -93,8 +93,6 @@ Adds practical speedrun quality-of-life options for cleaner menus, faster resets
 - **Rerolling Saves the Game:** Saluting the Oath statue now triggers a game save.
 - **Arcana & Fear on Victory Screen:** Displays Arcana and Fear on the victory screen.
 
-<img src="https://raw.githubusercontent.com/h2pack-speedrun/adamantSpeedrun-QoL/main/assets/victory1.jpg" width="80%"/>
-
 <img src="https://raw.githubusercontent.com/h2pack-speedrun/adamantSpeedrun-QoL/main/assets/victory2.jpg" width="80%"/>
 
 ### Gameplay QoL
