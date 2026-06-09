@@ -11,14 +11,14 @@ Have a single unified UI panel to manage all module toggles, settings, and share
 
 The Quick Setup tab gives each included module a compact enable toggle so a profile can be configured without jumping between separate mod menus.
 
-![Speedrun modpack Quick Setup tab with module enable toggles](assets/QuickSetup.png)
+<img src="https://raw.githubusercontent.com/h2pack-speedrun/adamantSpeedrun-Speedrun_Modpack/main/assets/QuickSetup.png" width="100%"/>
 
 ### Profiles
 Save different configurations, such as Any Fear, High Fear, RTA, or multi-run practice, into profiles and load them with one click in game.
 
 Profiles store the shared Speedrun settings state, making it easier to swap between routing, practice, and submission setups.
 
-![Speedrun modpack profile management tab](assets/Profile.png)
+<img src="https://raw.githubusercontent.com/h2pack-speedrun/adamantSpeedrun-Speedrun_Modpack/main/assets/Profile.png" width="100%"/>
 
 ### Hashing
 While the pack is installed, a unique fingerprint will be shown on the side to identify the settings that pack has been configured with.
@@ -42,7 +42,7 @@ Coverage is grouped by weapon and aspect:
 
 #### Hammer Panel Options
 
-![Select First Hammer panel with weapon-aspect hammer choices](assets/Hammer.png)
+<img src="https://raw.githubusercontent.com/h2pack-speedrun/adamantSpeedrun-Speedrun_Modpack/main/assets/Hammer.png" width="100%"/>
 
 ### LiveSplit
 
@@ -51,10 +51,10 @@ Adds native LiveSplit-like timing support to the game.
 #### Examples
 The recording table can show biome splits with selected timing columns while a run is active.
 
-![LiveSplit timer table with biome splits](assets/Timer1.png)
+<img src="https://raw.githubusercontent.com/h2pack-speedrun/adamantSpeedrun-Speedrun_Modpack/main/assets/Timer1.png" width="100%"/>
 
 
-![Another LiveSplit timer table](assets/Timer2.png)
+<img src="https://raw.githubusercontent.com/h2pack-speedrun/adamantSpeedrun-Speedrun_Modpack/main/assets/Timer2.png" width="100%"/>
 
 LiveSplit records runs and shows selected timing information while you play. Its main feature is a compact recording table that tracks your route through a run.
 
@@ -70,12 +70,12 @@ Supported timing views include:
 #### Options while doing single run repeated recording
 Single-run mode keeps the next run ready for split recording and is aimed at repeated normal attempts.
 
-![LiveSplit single-run recording controls](assets/SingleRun.png)
+<img src="https://raw.githubusercontent.com/h2pack-speedrun/adamantSpeedrun-Speedrun_Modpack/main/assets/SingleRun.png" width="100%"/>
 
 #### Options while doing multi run repeated recording
 Multi-run mode records a batch of consecutive runs and keeps cumulative batch totals.
 
-![LiveSplit multi-run batch recording controls](assets/MultiRun.png)
+<img src="https://raw.githubusercontent.com/h2pack-speedrun/adamantSpeedrun-Speedrun_Modpack/main/assets/MultiRun.png" width="100%"/>
 
 ### Quality of Life
 
