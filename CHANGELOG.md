@@ -4,6 +4,8 @@ Coordinator for the Speedrun modpack. It owns pack identity, config, default pro
 
 ## [Unreleased]
 
+## [2.0.2] - 2026-06-09
+
 ## [2.0.1] - 2026-06-09
 
 ## [2.0.0] - 2026-06-09
@@ -20,7 +22,8 @@ Coordinator for the Speedrun modpack. It owns pack identity, config, default pro
 
 ## [1.0.0] - 2026-04-21
 
-[unreleased]: https://github.com/h2pack-speedrun/adamantSpeedrun-Speedrun_Modpack/compare/2.0.1...HEAD
+[unreleased]: https://github.com/h2pack-speedrun/adamantSpeedrun-Speedrun_Modpack/compare/2.0.2...HEAD
+[2.0.2]: https://github.com/h2pack-speedrun/adamantSpeedrun-Speedrun_Modpack/compare/2.0.1...2.0.2
 [2.0.1]: https://github.com/h2pack-speedrun/adamantSpeedrun-Speedrun_Modpack/compare/2.0.0...2.0.1
 [2.0.0]: https://github.com/h2pack-speedrun/adamantSpeedrun-Speedrun_Modpack/compare/1.1.0...2.0.0
 [1.1.0]: https://github.com/h2pack-speedrun/adamant-Speedrun_Modpack/compare/1.0.0...1.1.0
