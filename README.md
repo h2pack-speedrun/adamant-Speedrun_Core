@@ -11,17 +11,19 @@ Have a single unified UI panel to manage all module toggles, settings, and share
 
 The Quick Setup tab gives each included module a compact enable toggle so a profile can be configured without jumping between separate mod menus.
 
-<img src="https://raw.githubusercontent.com/h2pack-speedrun/adamantSpeedrun-Speedrun_Modpack/main/assets/QuickSetup.png" width="100%"/>
+<img src="https://raw.githubusercontent.com/h2pack-speedrun/adamantSpeedrun-Speedrun_Modpack/main/assets/QuickSetup.png" width="90%"/>
 
 ### Profiles
 Save different configurations, such as Any Fear, High Fear, RTA, or multi-run practice, into profiles and load them with one click in game.
 
 Profiles store the shared Speedrun settings state, making it easier to swap between routing, practice, and submission setups.
 
-<img src="https://raw.githubusercontent.com/h2pack-speedrun/adamantSpeedrun-Speedrun_Modpack/main/assets/Profile.png" width="100%"/>
+<img src="https://raw.githubusercontent.com/h2pack-speedrun/adamantSpeedrun-Speedrun_Modpack/main/assets/Profile.png" width="90%"/>
 
 ### Hashing
-While the pack is installed, a unique fingerprint will be shown on the side to identify the settings that pack has been configured with.
+While the pack is installed, a unique fingerprint will be shown on the side. This is simply to confirm the uniqueness of the configuration in the pack.
+
+<img src="https://raw.githubusercontent.com/h2pack-speedrun/adamantSpeedrun-Speedrun_Modpack/main/assets/Hashing.png" width="60%"/>
 
 ## Included Modules
 
@@ -31,30 +33,23 @@ Choose the guaranteed first Daedalus Hammer for each weapon aspect.
 
 Instead of taking a random first hammer, you can assign a specific opener to every aspect in the game. Leaving an aspect on None (Random) preserves vanilla behavior for that aspect.
 
-Coverage is grouped by weapon and aspect:
-
-- Staff
-- Blades
-- Axe
-- Torch
-- Skull
-- Coat
+The module provides a separate first-hammer selection for every aspect across the full weapon roster. UI layout is grouped by weapon, then by aspect.
 
 #### Hammer Panel Options
 
-<img src="https://raw.githubusercontent.com/h2pack-speedrun/adamantSpeedrun-Speedrun_Modpack/main/assets/Hammer.png" width="100%"/>
+<img src="https://raw.githubusercontent.com/h2pack-speedrun/adamantSpeedrun-Select_First_Hammer/main/assets/Hammer.png" width="60%"/>
 
 ### LiveSplit
 
-Adds native LiveSplit-like timing support to the game.
+Adds native LiveSplit-like timing support to the game. Thanks to Museus for their original Timer mod. This is a big expansion on that.
 
 #### Examples
 The recording table can show biome splits with selected timing columns while a run is active.
 
-<img src="https://raw.githubusercontent.com/h2pack-speedrun/adamantSpeedrun-Speedrun_Modpack/main/assets/Timer1.png" width="100%"/>
+<img src="https://raw.githubusercontent.com/h2pack-speedrun/adamantSpeedrun-LiveSplit/main/assets/Timer1.png" width="60%"/>
 
 
-<img src="https://raw.githubusercontent.com/h2pack-speedrun/adamantSpeedrun-Speedrun_Modpack/main/assets/Timer2.png" width="100%"/>
+<img src="https://raw.githubusercontent.com/h2pack-speedrun/adamantSpeedrun-LiveSplit/main/assets/Timer2.png" width="60%"/>
 
 LiveSplit records runs and shows selected timing information while you play. Its main feature is a compact recording table that tracks your route through a run.
 
@@ -66,27 +61,26 @@ Supported timing views include:
 - Single-run split recording
 - Multi-run batch recording for routing or practice sessions
 - IGT, RTA, and LrT timing columns
+- Recording continues until you stop recording
 
 #### Options while doing single run repeated recording
 Single-run mode keeps the next run ready for split recording and is aimed at repeated normal attempts.
 
-<img src="https://raw.githubusercontent.com/h2pack-speedrun/adamantSpeedrun-Speedrun_Modpack/main/assets/SingleRun.png" width="100%"/>
+<img src="https://raw.githubusercontent.com/h2pack-speedrun/adamantSpeedrun-LiveSplit/main/assets/SingleRun.png" width="60%"/>
 
 #### Options while doing multi run repeated recording
 Multi-run mode records a batch of consecutive runs and keeps cumulative batch totals.
 
-<img src="https://raw.githubusercontent.com/h2pack-speedrun/adamantSpeedrun-Speedrun_Modpack/main/assets/MultiRun.png" width="100%"/>
+<img src="https://raw.githubusercontent.com/h2pack-speedrun/adamantSpeedrun-LiveSplit/main/assets/MultiRun.png" width="60%"/>
 
 ### Quality of Life
 
+Thanks to Pony for their QoL mod. This is a port of many of their features into my modpack for hashing/profiles, alongside my own QoL.
+
 Adds practical speedrun quality-of-life options for cleaner menus, faster resets, and better keyboard-and-mouse handling.
 
-Current options:
+#### Direct ports from PonyQoL
 
-- KBM Escape Fix
-  Makes Escape work during boon and pom selection, Hex selection, Path of Stars, and death sequences.
-- Rerolling Saves the Game
-  Saluting the Oath statue now triggers a game save.
 - Always Show Location
   Always displays the current location in the UI.
 - Skip Death Cutscene
@@ -96,9 +90,20 @@ Current options:
 - Skip Run End Cutscene
   Skips the end-of-run cutscene and returns you to the main menu faster while still showing the victory screen.
 - Spawn in Training Grounds
-  Spawns you in the Training Grounds instead of the House of Hades. Useful for testing and practicing.
+  Spawns you in the Training Grounds instead of next to Frinos pool.
+
+#### Speedrun QoL additions
+
+- KBM Escape Fix
+  Makes Escape work during boon and pom selection, Hex selection, Path of Stars, and death sequences.
+- Rerolling Saves the Game
+  Saluting the Oath statue now triggers a game save.
 - Arcana & Fear on Victory Screen
   Displays Arcana and Fear on the victory screen.
+
+<img src="https://raw.githubusercontent.com/h2pack-speedrun/adamantSpeedrun-QoL/main/assets/victory1.jpg" width="80%"/>
+
+<img src="https://raw.githubusercontent.com/h2pack-speedrun/adamantSpeedrun-QoL/main/assets/victory2.jpg" width="80%"/>
 
 ### Gameplay QoL
 
@@ -107,9 +112,9 @@ Adds run-flow and routing helpers without changing the broader balance package.
 Current options:
 
 - Familiar Delay Fix
-  Fixes Familiars being summoned after a delay upon entering a room.
+  Shorten the delay before Familiars are summoned upon entering a room.
 - Miniboss Encounter Fix
-  Fixes minibosses with top-screen health bars not properly progressing biome depth.
+  Fixes minibosses with top-screen health bars, like Charybdis, Ephyra Boar, Talos, and Summit minibosses, not properly progressing biome depth.
 - Skip Gem Boss Reward
   Stops bosses from dropping gem rewards when using Grave Thirst.
 - Prevent Echo Scam
@@ -123,7 +128,7 @@ Current options:
 - Force Medea Spawn
   Forces Medea to spawn to reduce death pity reset.
 - Incrementing Fig Leaf
-  Dionysus skip chance starts at the default value, increases by 13% after every encounter, and resets on biome start.
+  Dionysus skip chance starts at the default value (37%), increases by 13% after every encounter, and resets on biome start.
 
 ### Balance Changes
 
@@ -134,13 +139,11 @@ Current options:
 - Anubis Wall Placement Fix
   Fixes Mirrored Ankh omega attack wall placement based on casting angle.
 - Omega Cast Fix
-  Fixes omega-cast moves not counting as cast damage.
+  Adds missing omega-cast projectiles to the cast-damage projectile set.
 - Poseidon Waves Fix
-  Fixes Poseidon waves on Axe special and Hidden Helix Torch.
+  Fixes Poseidon waves on Axe special and Hidden Helix Torch. It triggers Poseidon splash on all 3 axe special hits and all 3 torch special balls.
 - Remove Second Channeling
-  Removes the second charge stage of Glorious Disaster and Giga Moonburst, baking the bonus into stage 1.
-- Shimmering Moonshot Fix
-  Fixes Shimmering Moonshot not applying its damage bonus to omega special.
+  Removes the second charge stage of Glorious Disaster and Giga Moonburst, baking the bonus into stage 1. Magick increase stays the same.
 - Aspect of Selene Fix
   Treats Aspect of Selene's built-in Hex as the run's Selene pickup so Path of Stars replaces normal Selene drops. Skyfall starts at full Moonglow.
 - Axe Omega Channel Fix
