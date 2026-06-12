@@ -4,6 +4,12 @@ Unrelated Mod to the Hades 1 modpack. Just slightly inspired by it is all.
 
 This is a modular Hades II modpack. Every module here can either be installed individually or part of the pack. It brings together first-hammer selection, in-game LiveSplit-style timing, quality-of-life options, gameplay-flow quality-of-life adjustments, minor balance/description fixes, and Surface route adjustments under one shared Speedrun settings window.
 
+## How To Open The Settings
+
+In game, open the mod menu from `Mods -> adamantSpeedrun-Speedrun_Modpack -> Show Modpack Menu`.
+
+<img src="https://raw.githubusercontent.com/h2pack-speedrun/adamantSpeedrun-Speedrun_Modpack/main/assets/HowToOpen.png" width="70%"/>
+
 ## What the pack brings instead of individual installs
 
 ### Unified UI
@@ -11,7 +17,9 @@ Have a single unified UI panel to manage all module toggles, settings, and share
 
 The Quick Setup tab gives each included module a compact enable toggle so a profile can be configured without jumping between separate mod menus.
 
-<img src="https://raw.githubusercontent.com/h2pack-speedrun/adamantSpeedrun-Speedrun_Modpack/main/assets/QuickSetup.png" width="90%"/>
+<img src="https://raw.githubusercontent.com/h2pack-speedrun/adamantSpeedrun-Speedrun_Modpack/main/assets/FullMenu.png" width="80%"/>
+
+<img src="https://raw.githubusercontent.com/h2pack-speedrun/adamantSpeedrun-Speedrun_Modpack/main/assets/QuickSetup.png" width="80%"/>
 
 ### Profiles
 Save different configurations, such as Any Fear, High Fear, RTA, or multi-run practice, into profiles and load them with one click in game.
