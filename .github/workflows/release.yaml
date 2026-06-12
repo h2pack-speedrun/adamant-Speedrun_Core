@@ -10,9 +10,16 @@ on:
       is-dry-run:
         description: "Dry-run (do not publish, only test build)"
         type: boolean
+      lib-version:
+        description: "ModpackLib dependency version to pin (blank keeps current manifest pin)"
+        required: false
+      dependency-pins:
+        description: "Comma-separated dependency pins PACKAGE=VERSION (blank keeps current manifest pins)"
+        required: false
 
 permissions:
   contents: write
+  actions: read
 
 env:
   changelog: CHANGELOG.md
@@ -32,6 +39,26 @@ jobs:
             exit 1
           fi
 
+      - name: Verify CI passed for release commit
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          SHA: ${{ github.sha }}
+        run: |
+          ci_run=$(gh run list \
+            --repo "$REPO" \
+            --workflow "ci.yaml" \
+            --commit "$SHA" \
+            --status success \
+            --limit 1 \
+            --json databaseId \
+            --jq '.[0].databaseId')
+          if [ -z "$ci_run" ]; then
+            echo "::error title=CI has not passed::No successful ci.yaml run was found for $SHA. Push the commit and wait for CI before releasing."
+            exit 1
+          fi
+          echo "Found successful CI run $ci_run for $SHA."
+
       - name: Checkout files
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
@@ -45,24 +72,25 @@ jobs:
           path: .modpacktools
           ref: main
 
-      - name: Setup Lua
-        uses: leafo/gh-actions-lua@v10
-        with:
-          luaVersion: "5.2"
-
-      - name: Setup Luarocks
-        uses: leafo/gh-actions-luarocks@v4
-
-      - name: Install Luacheck
-        run: luarocks install luacheck
-
-      - name: Validate package sources
-        run: |
-          luacheck src/
-          find src -type f -name '*.lua' -print0 | xargs -0 -r -n1 luac -p
-
       - name: Prepare release files
-        run: python .modpacktools/github/prepare_package_release.py --tag '${{ inputs.tag }}' --allow-empty --release-notes-output .release-notes.md
+        env:
+          LIB_VERSION: ${{ inputs['lib-version'] }}
+          DEPENDENCY_PINS: ${{ inputs['dependency-pins'] }}
+        run: |
+          args=(--tag '${{ inputs.tag }}' --allow-empty --release-notes-output .release-notes.md)
+          if [ -n "$LIB_VERSION" ]; then
+            args+=(--pin-dependency "adamant-ModpackLib=$LIB_VERSION")
+          fi
+          if [ -n "$DEPENDENCY_PINS" ]; then
+            IFS=',' read -ra pins <<< "$DEPENDENCY_PINS"
+            for raw_pin in "${pins[@]}"; do
+              pin=$(echo "$raw_pin" | xargs)
+              if [ -n "$pin" ]; then
+                args+=(--pin-dependency "$pin")
+              fi
+            done
+          fi
+          python .modpacktools/github/prepare_package_release.py "${args[@]}"
 
       - name: Install Thunderstore CLI
         run: dotnet tool install -g tcli

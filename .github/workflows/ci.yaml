@@ -1,4 +1,4 @@
-name: Lua Validation
+name: CI
 
 on:
   push:
@@ -7,10 +7,10 @@ on:
     branches: [ main ]
 
 jobs:
-  lint:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
+      - name: Checkout files
         uses: actions/checkout@v4
 
       - name: Setup Lua
@@ -21,12 +21,11 @@ jobs:
       - name: Setup Luarocks
         uses: leafo/gh-actions-luarocks@v4
 
-      - name: Install Luacheck
+      - name: Install validation tools
         run: luarocks install luacheck
 
       - name: Run Luacheck
         run: luacheck src/
 
       - name: Parse Lua sources
-        run: |
-          find src -type f -name '*.lua' -print0 | xargs -0 -r -n1 luac -p
+        run: find src -type f -name '*.lua' -print0 | xargs -0 -r -n1 luac -p
