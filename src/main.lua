@@ -33,6 +33,7 @@ local MODPACK_OPTS = {
         "QoL",
         "Balance_Changes",
         "Surface_Rebalance",
+        "Boonless",
     },
 }
 local modpackInitialized = false

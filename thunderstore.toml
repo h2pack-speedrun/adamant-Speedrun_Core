@@ -20,12 +20,13 @@ adamant-ModpackLib = "1.0.0"
 
 
 # -- submodules-start --
-adamantSpeedrun-Balance_Changes = "2.0.0"
-adamantSpeedrun-Gameplay_QoL = "2.0.0"
-adamantSpeedrun-LiveSplit = "2.0.0"
-adamantSpeedrun-QoL = "2.0.0"
-adamantSpeedrun-Select_First_Hammer = "2.0.0"
-adamantSpeedrun-Surface_Rebalance = "2.0.0"
+adamantSpeedrun-Balance_Changes = "3.0.0"
+adamantSpeedrun-Boonless = "0.0.1"
+adamantSpeedrun-Gameplay_QoL = "3.0.0"
+adamantSpeedrun-LiveSplit = "3.0.0"
+adamantSpeedrun-QoL = "3.0.0"
+adamantSpeedrun-Select_First_Hammer = "3.0.0"
+adamantSpeedrun-Surface_Rebalance = "3.0.0"
 # -- submodules-end --
 
 [build]

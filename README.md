@@ -2,7 +2,7 @@
 
 Unrelated Mod to the Hades 1 modpack. Just slightly inspired by it is all.
 
-This is a modular Hades II modpack. Every module here can either be installed individually or part of the pack. It brings together first-hammer selection, in-game LiveSplit-style timing, quality-of-life options, gameplay-flow quality-of-life adjustments, minor balance/description fixes, and Surface route adjustments under one shared Speedrun settings window.
+This is a modular Hades II modpack. Every module here can either be installed individually or part of the pack. It brings together first-hammer selection, boonless route controls, in-game LiveSplit-style timing, quality-of-life options, gameplay-flow quality-of-life adjustments, minor balance/description fixes, and Surface route adjustments under one shared Speedrun settings window.
 
 ## How To Open The Settings
 
@@ -46,6 +46,16 @@ The module provides a separate first-hammer selection for every aspect across th
 #### Hammer Panel Options
 
 <img src="https://raw.githubusercontent.com/h2pack-speedrun/adamantSpeedrun-Select_First_Hammer/main/assets/Hammer.png" width="60%"/>
+
+### Boonless
+
+Adds boonless route controls for unlimited Vow of Forsaking skips and optional Shared Wealth fallbacks.
+
+Current options:
+
+- **Preset Dropdown:** Applies common Boonless checkbox configurations.
+- **Unlimited Boon Skips:** Lets Vow of Forsaking keep offering boon skips without consuming the biome skip count.
+- **Shared Wealth Fallbacks:** Converts selected boon offers, special offers, weapon upgrades, and route NPC rewards into Shared Wealth.
 
 ### LiveSplit
 
