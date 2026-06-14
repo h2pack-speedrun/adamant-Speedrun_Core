@@ -47,16 +47,6 @@ The module provides a separate first-hammer selection for every aspect across th
 
 <img src="https://raw.githubusercontent.com/h2pack-speedrun/adamantSpeedrun-Select_First_Hammer/main/assets/Hammer.png" width="60%"/>
 
-### Boonless
-
-Adds boonless route controls for unlimited Vow of Forsaking skips and optional Shared Wealth fallbacks.
-
-Current options:
-
-- **Preset Dropdown:** Applies common Boonless checkbox configurations.
-- **Unlimited Boon Skips:** Lets Vow of Forsaking keep offering boon skips without consuming the biome skip count.
-- **Shared Wealth Fallbacks:** Converts selected boon offers, special offers, weapon upgrades, and route NPC rewards into Shared Wealth.
-
 ### LiveSplit
 
 Adds native LiveSplit-like timing support to the game. Thanks to Museus for their original Timer mod. This is a big expansion on that.
@@ -154,6 +144,30 @@ Current options:
 - **Force Olympus Midshop:** Forces the Olympus midshop to appear between rooms 5-7.
 - **Remove Thessaly Heracles:** Removes Heracles encounter options from Thessaly.
 - **Adjust Charybdis Behavior:** At phase transition, tentacles despawn in 1 second instead of 9 seconds. Charybdis fires 6 spits instead of 8.
+
+### Boonless
+
+This module provides the option to transform all run rewards into onions of spare gold. It meant for challenge runs under a maybe Boonless category.
+
+Current options:
+
+- **Preset Dropdown:** Applies common Boonless checkbox configurations from the full module tab or Quick Setup.
+- **Individual Reward Toggles:** Converts selected boons, NPC rewards, Chaos, or Daedalus Hammer offers into Shared Wealth.
+- **Unlimited Boon Skips:** Lets Vow of Forfeit keep offering boon skips without consuming the biome skip count.
+
+Individual checkboxes can target normal boons, each route NPC, Chaos, and hammers.
+
+<img src="https://raw.githubusercontent.com/h2pack-speedrun/adamantSpeedrun-Boonless/main/assets/options.png" width="60%"/>
+
+Presets cover common route shapes:
+
+- Removing normal boons only
+- Removing Olympian gifts, including the core gods plus Athena, Artemis, Dionysus, and Hades
+- Removing Olympian and NPC gifts, including Medea, Circe, Icarus, Arachne, Narcissus, Echo, and Chaos
+- Converting hammers as part of the full Shared Wealth preset
+
+<img src="https://raw.githubusercontent.com/h2pack-speedrun/adamantSpeedrun-Boonless/main/assets/presets.png" width="60%"/>
+
 
 ## How To Use
 
