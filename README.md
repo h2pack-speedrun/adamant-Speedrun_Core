@@ -152,10 +152,10 @@ This module provides the option to transform all run rewards into onions of spar
 Current options:
 
 - **Preset Dropdown:** Applies common Boonless checkbox configurations from the full module tab or Quick Setup.
-- **Individual Reward Toggles:** Converts selected boons, NPC rewards, Chaos, or Daedalus Hammer offers into Shared Wealth.
-- **Unlimited Boon Skips:** Lets Vow of Forfeit keep offering boon skips without consuming the biome skip count.
+- **Individual Reward Toggles:** Converts selected boons, NPC rewards, Chaos, Selene, or Daedalus Hammer offers into Shared Wealth.
+- **Vow of Forfeit Toggles:** Lets Vow of Forfeit keep skipping selected boon, Selene, or hammer room rewards without consuming the biome skip count.
 
-Individual checkboxes can target normal boons, each route NPC, Chaos, and hammers.
+Individual checkboxes can target normal boons, hammers, Selene, each route NPC, and Chaos. Boon, hammer, and Selene controls each pair a Shared Wealth fallback with a matching Vow of Forfeit skip toggle.
 
 <img src="https://raw.githubusercontent.com/h2pack-speedrun/adamantSpeedrun-Boonless/main/assets/options.png" width="60%"/>
 
@@ -163,7 +163,7 @@ Presets cover common route shapes:
 
 - Removing normal boons only
 - Removing Olympian gifts, including the core gods plus Athena, Artemis, Dionysus, and Hades
-- Removing Olympian and NPC gifts, including Medea, Circe, Icarus, Arachne, Narcissus, Echo, and Chaos
+- Removing Olympian, NPC, and special gifts, including Medea, Circe, Icarus, Arachne, Narcissus, Echo, Chaos, and Selene
 - Converting hammers as part of the full Shared Wealth preset
 
 <img src="https://raw.githubusercontent.com/h2pack-speedrun/adamantSpeedrun-Boonless/main/assets/presets.png" width="60%"/>
