@@ -4,6 +4,18 @@ Coordinator for the Speedrun modpack. It owns pack identity, config, default pro
 
 ## [Unreleased]
 
+## [3.0.3] - 2026-06-15
+
+### Added
+
+- coordinator: include InfiniDD in module order (
+236a8d)
+
+### Documentation
+
+- update boonless reward options (
+c83bc9)
+
 ## [3.0.2] - 2026-06-15
 
 ### Added

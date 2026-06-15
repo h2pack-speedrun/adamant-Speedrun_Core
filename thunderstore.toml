@@ -5,7 +5,7 @@ schemaVersion = "0.0.1"
 [package]
 namespace = "adamantSpeedrun"
 name = "Speedrun_Modpack"
-versionNumber = "3.0.2"
+versionNumber = "3.0.3"
 description = "Speedrun modpack package."
 websiteUrl = "https://github.com/h2pack-speedrun/adamantSpeedrun-Speedrun_Modpack"
 containsNsfwContent = false
@@ -16,7 +16,7 @@ LuaENVY-ENVY = "1.2.0"
 SGG_Modding-Chalk = "2.1.1"
 SGG_Modding-ReLoad = "1.0.2"
 SGG_Modding-ModUtil = "4.0.1"
-adamant-ModpackLib = "1.0.0"
+adamant-ModpackLib = "3.1.0"
 
 
 # -- submodules-start --
