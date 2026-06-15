@@ -4,6 +4,18 @@ Coordinator for the Speedrun modpack. It owns pack identity, config, default pro
 
 ## [Unreleased]
 
+## [3.0.2] - 2026-06-15
+
+### Added
+
+- include boonless module (
+1bcebe)
+
+### Documentation
+
+- expand boonless pack readme (
+0b8a5c)
+
 ## [3.0.1] - 2026-06-12
 
 ### Documentation
