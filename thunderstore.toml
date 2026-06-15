@@ -21,7 +21,7 @@ adamant-ModpackLib = "1.0.0"
 
 # -- submodules-start --
 adamantSpeedrun-Balance_Changes = "3.0.0"
-adamantSpeedrun-Boonless = "0.0.1"
+adamantSpeedrun-Boonless = "1.0.1"
 adamantSpeedrun-Gameplay_QoL = "3.0.0"
 adamantSpeedrun-LiveSplit = "3.0.0"
 adamantSpeedrun-QoL = "3.0.0"
